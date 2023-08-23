@@ -1,6 +1,6 @@
 
 
 .web-top {
-  background:no-repeat url("../assets/spiderweb.png"), lightslategray;
+  background:no-repeat url("../assets/spiderweb.png"), rgb(43,55,132);
   margin: 40px;
 }
