@@ -1,0 +1,26 @@
+
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  margin: 18px;
+  padding-left: 30px;
+  padding-right: 2px;
+  border-radius: 3px;
+  background: rgb(250,250,250, .2);
+}
+
+h2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: auto;
+  font-size: 24px;
+  color: white;
+}
