@@ -18,7 +18,7 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 1440px;
   color: #f5fffa;
   font-size: 84px;
+  margin: auto 42px auto 42px;
 }

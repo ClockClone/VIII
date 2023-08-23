@@ -3,16 +3,18 @@ import "./bio.css";
 
 function bio() {
 	return (
-		<div>
+		<div className="container">
 			<div className="bio">
 				<h2>
-					Hi my name is Troy Washington, I've been coding for over a year now. I
-					took a momentary break from coding/developing/hacking over the summer
-					of 2023 but now I am back and ready to start pushing some code. My
-					hobbies are skating, video games, and riding my bike. My interest are
-					boxing, baseball, philosophy and computer engineering. Please don't be
-					afraid to message me if you are interested in collaborating on a
-					project.
+					What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+					and typesetting industry. Lorem Ipsum has been the industry's standard
+					dummy text ever since the 1500s, when an unknown printer took a galley
+					of type and scrambled it to make a type specimen book. It has survived
+					not only five centuries, but also the leap into electronic
+					typesetting, remaining essentially unchanged. It was popularised in
+					the 1960s with the release of Letraset sheets containing Lorem Ipsum
+					passages, and more recently with desktop publishing software like
+					Aldus PageMaker including versions of Lorem Ipsum.
 				</h2>
 			</div>
 		</div>
