@@ -6,14 +6,8 @@ import "./App.css";
 const App = () => {
 	return (
 		<BrowserRouter>
-			<Sidebar />
 			<Routes>
-				<Route path="/" element={<Body />}></Route>
-				<Route path="/" element={<Body />}></Route>
-				<Route path="/" element={<Body />}></Route>
-				<Route path="/" element={<Body />}></Route>
-				<Route path="/" element={<Body />}></Route>
-				<Route path="/" element={<Body />}></Route>
+				<Route path="/" element={<Sidebar />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);

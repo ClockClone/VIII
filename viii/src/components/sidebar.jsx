@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	FaTh,
 	FaUserAlt,
@@ -8,8 +8,11 @@ import {
 	FaBars,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import Body from "../pages/body";
 
-const sidebar = ({ children }) => {
+const Sidebar = ({ children }) => {
+	const [isOpen, setIsOpen] = useState(false);
+	const toggle = () => setIsOpen(!isOpen);
 	const menuItem = [
 		{
 			path: "/",
@@ -39,29 +42,44 @@ const sidebar = ({ children }) => {
 	];
 
 	return (
-		<div className="nav-container">
-			<div className="sidebar">
-				<div className="top_section">
-					<h1 className="logo">Logo</h1>
-					<div className="bars">
-						<FaBars />
+		<>
+			<div className="nav-container">
+				<div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
+					<div className="top_section">
+						<h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+							Logo
+						</h1>
+						<div
+							style={{ marginLeft: isOpen ? "50px" : "0px" }}
+							className="bars"
+						>
+							<FaBars onClick={toggle} />
+						</div>
 					</div>
+					{menuItem.map((item, index) => (
+						<NavLink
+							to={item.path}
+							key={index}
+							className="link"
+							activeclassName="active"
+						>
+							<div className="icon">{item.icon}</div>
+							<div
+								style={{ display: isOpen ? "block" : "none" }}
+								className="link_text"
+							>
+								{item.name}
+							</div>
+						</NavLink>
+					))}
 				</div>
-				{menuItem.map((item, index) => (
-					<NavLink
-						to={item.path}
-						key={index}
-						className="link"
-						activeclassName="active"
-					>
-						<div className="icon">{item.icon}</div>
-						<div className="link_text">{item.name}</div>
-					</NavLink>
-				))}
+				<main>
+					{children}
+					<Body />
+				</main>
 			</div>
-			<main>{children}</main>
-		</div>
+		</>
 	);
 };
 
-export default sidebar;
+export default Sidebar;
